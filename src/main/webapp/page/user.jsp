@@ -43,6 +43,9 @@
                 <li>
                     <a href="${pageContext.request.contextPath}/permissions/findAll.do">权限列表</a>
                 </li>
+                <li class="active">
+                    <a href="${pageContext.request.contextPath}/test/findAll.do">test</a>
+                </li>
             </ul>
         </div>
         <div style="margin-left: 21%;margin-right: 16%;margin-top: -8%;" class="text-center">

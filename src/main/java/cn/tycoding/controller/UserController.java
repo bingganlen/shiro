@@ -64,7 +64,7 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping("/create")
-    @RequiresRoles(value={"admin","personnel-resource"}, logical = Logical.OR)
+    @RequiresRoles(value={"admin","personnel-resource"}, logical = Logical.OR) // 限定角色才能访问  总经理 人力资源部部长   logical = Logical.OR控制器上的注解内容
     public Result create(@RequestBody User user) {
         try {
             userService.create(user);

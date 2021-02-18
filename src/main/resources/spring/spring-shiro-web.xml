@@ -155,6 +155,12 @@
 
                 <!-- authc表示访问该地址用户必须身份验证通过，即Subject.isAuthenticated() == true -->
                 /authenticated.jsp = authc
+                <!--# 想要访问主界面(/test/)就必修又有["test权限"]的权限       perms["test:test"]   -->
+                <!--/test/**= authc,roleOR[test]-->
+                <!--/test/** = roles["test-test1"]-->  <!--角色   admin 无权限   ttt有    涂陌有   -->
+
+               <!-- /test/** = perms["test:test"]-->  <!--权限   admin有 ttt有  正确了-->
+
 
                 <!-- `/**`表示所有请求，表示访问该地址的用户是身份验证通过或RememberMe登录的都可以 -->
                 /** = user
